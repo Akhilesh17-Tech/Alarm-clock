@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <img src="" alt="">
+    <title>Akhil's Alarm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- main container  -->
+    <div class="container">
+        <!-- title in header section  -->
+        <div class="header">Alarm Clock</div>
+        <!-- container for current time which is updating every time -->
+        <div id="current-time"></div>
+        <h1 class="titleAlarm">Set Alarm (12-Hour's Clock)</h1>
+
+        <!-- form for new alarm setup   -->
+        <form class="set-alarm">
+            <div class="flex">
+                <select name="hour" id="hour">
+                    <option value="00">HH</option>
+                </select>
+                <select name="minute" id="min">
+                    <option value="00">MM</option>
+                </select>
+                <select name="second" id="sec">
+                    <option value="00">SS</option>
+                </select>
+                <select name="ampm" id="ampm">
+                    <option value="AM">AM</option>
+                    <option value="PM">PM</option>
+                </select>
+            </div>
+            <div class="input-box">
+                <input type="text" id="alarmlable" required placeholder="what do you want ?">
+            </div>
+            <div class="flex">
+                <button type="submit" id="setAlrm">Set Alarm</button>
+                <button type="reset" onclick="clearAlarm()">Stop Alarm</button>
+            </div>
+        </form>
+        <hr>
+
+        <!-- blank are where new alarms will be pushed by javascript -->
+        <div>
+            <div class="upcoming-alarm">Upcoming Alarms</div>
+            <div class="alarm-list">
+                <ul class="set-alarms-list">
+                    <!-- <li class="time-list"><span class="time">12:00:00 AM</span>
+                        <p class="alarmLable">Akhilesh please wake up</p>
+                        <button class="delete" value="submit">DELETE</button>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
