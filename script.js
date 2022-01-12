@@ -4,6 +4,7 @@ let alarmList = [];
 
 function updateTime() {
   var today = new Date();
+  // console.log(today);
   let hour = today.getHours();
   let minute = today.getMinutes();
   let second = today.getSeconds();
@@ -33,17 +34,17 @@ function upDateOptions() {
   let hour = document.getElementById("hour");
   let minute = document.getElementById("min");
   let second = document.getElementById("sec");
-  let hr = 12;
-  let min = 59;
-  let sec = 59;
+  let hr = 13;
+  let min = 60;
+  let sec = 60;
   for (i = 1; i <= hr; i++) {
-    hour.options[i] = new Option(i < 10 ? "0" + (i - 1) : i);
+    hour.options[i] = new Option(i <= 10 ? "0" + (i - 1) : i - 1);
   }
   for (i = 1; i <= min; i++) {
-    minute.options[i] = new Option(i < 10 ? "0" + (i - 1) : i);
+    minute.options[i] = new Option(i <= 10 ? "0" + (i - 1) : i - 1);
   }
   for (i = 1; i <= sec; i++) {
-    second.options[i] = new Option(i < 10 ? "0" + (i - 1) : i);
+    second.options[i] = new Option(i <= 10 ? "0" + (i - 1) : i - 1);
   }
 }
 upDateOptions();
@@ -93,7 +94,8 @@ myList.addEventListener("click", function (e) {
 });
 
 // Delete alarm
-const remove = (value) => {
+const remove = () => {
+  console.log(this);
   let newList = alarmList.filter((time) => time != value);
   alarmList.length = 0;
   alarmList.push.apply(alarmList, newList);
@@ -114,5 +116,7 @@ sound.loop = true;
 function ringAlarm(time) {
   sound.play();
   sound.play();
-  // alert(`hey it is alarming ${time}`);
+  setTimeout(function () {
+    alert(`hey it is alarming ${time}`);
+  }, 500);
 }

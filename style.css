@@ -7,8 +7,14 @@
 /*  main container */
 
 .container {
-  /* border: 1px solid red; */
-  background-color: rgb(117, 117, 117);
+  /* background: url(/watchBg.jpg) no-repeat center center fixed;
+   */
+  background: linear-gradient(
+    to right,
+    rgb(221, 219, 190) 40%,
+    rgb(45, 199, 160)
+  );
+  background-size: cover;
   min-height: 100vh;
   max-height: auto;
   position: absolute;
@@ -19,7 +25,7 @@
 .header {
   /* border: 1px solid green; */
   text-align: center;
-  background-color: rgb(32, 32, 32);
+  background: gray;
   color: white;
   font-size: 3.5rem;
   font-weight: 600;
@@ -31,8 +37,9 @@
   text-align: center;
   font-size: 80px;
   font-weight: bold;
-  /* border: 2px solid red; */
   padding: 15px;
+  width: 50%;
+  margin: auto;
 }
 
 .titleAlarm {
@@ -49,10 +56,16 @@
 
 .flex select {
   width: 5%;
+  background-color: gray;
+  color: white;
   margin: 0 45px;
   padding: 10px;
   border: none;
   border-radius: 5px;
+}
+
+.flex select:focus {
+  outline: none;
 }
 
 .flex button {
@@ -76,6 +89,7 @@
   border: 1px solid transparent;
   padding: 10px;
   border-radius: 5px;
+  background-color: white;
 }
 
 .input-box input:focus {
@@ -114,7 +128,8 @@ hr {
 }
 
 .time {
-  background-color: aliceblue;
+  background-color: rgb(49, 47, 47);
+  color: white;
   text-align: center;
   border: none;
   padding: 10px 25px;
@@ -153,7 +168,8 @@ hr {
     border-radius: 5px;
   }
   #current-time {
-    font-size: 50px;
+    font-size: 60px;
+    width: 100%;
   }
   .header {
     font-size: 20px;
@@ -169,8 +185,7 @@ hr {
   }
 
   .time {
-    padding: 12px;
-    background-color: aliceblue;
+    padding: 16px 0;
     font-size: 10px;
     font-weight: bold;
     width: 30%;
