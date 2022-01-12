@@ -14,7 +14,8 @@
 
 - Clock face
 
-   ` Clock showing the current time (seconds,mins,hrs should change as time changes)`
+   ` Clock showing the current time (seconds,mins,hrs,am/pm  should change as time changes)`
+   
 - Set Alarm
 
    `Provide input boxes to set an alarm`
@@ -23,9 +24,9 @@
  
    `When the alarm goes of just use JS alert function to alert in the browser Alarms list`
 
-- Display a list of
+- Display alarm list
 
-   `all the alarms set by user`
+   `all the alarms set by the user`
 
 - Delete alarm
 
