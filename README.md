@@ -1,7 +1,7 @@
 
 # Alarm-Clock using HTML, CSS & Javascipt
 
-- This is a repository for Alarm Clock Developed using Vanilla JavaScript, HTML, CSS.
+- This is a repository for Alarm Clock Developed using HTML, CSS & JavaScript.
 - It is developed with interesting features to provide users a digital yet real-life experience.
 
 # Problem Statement
@@ -14,15 +14,15 @@
 
 - Clock face
 
-   ` Clock showing the current time (seconds,mins,hrs,am/pm  should change as time changes)`
+   ` Clock showing the current time (seconds,mins,hrs,am/pm  will change as time changes)`
    
 - Set Alarm
 
-   `Provide input boxes to set an alarm`
+   `Provide select boxes with options to set an alarm`
 
    `Once the sets the time and click “Set Alarm” button, add that alarm to the alarms list below`
  
-   `When the alarm goes of just use JS alert function to alert in the browser Alarms list`
+   `When the alarm goes of just use JS alert function to alert in the browser`
 
 - Display alarm list
 
@@ -30,7 +30,7 @@
 
 - Delete alarm
 
-   `For each alarm give a delete button to delete the alarm When the user deletes an alarm make sure it “does not alerts the user”`
+   `For each alarm given a delete button to delete the alarm When the user deletes an alarm make sure it “does not alerts the user”`
 
 # Git clone
    
