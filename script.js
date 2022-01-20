@@ -1,7 +1,11 @@
+// element fetched for showing current time 
 var displayTime = document.getElementById("current-time");
-// set alarm funtion
+
+// list of alarms 
 let alarmList = [];
 
+
+// function for updating current time to displayTime
 function updateTime() {
   var today = new Date();
   // console.log(today);
@@ -29,7 +33,7 @@ function updateTime() {
 }
 updateTime();
 
-// function for updating options
+// function for updating options inside the select tag
 function upDateOptions() {
   let hour = document.getElementById("hour");
   let minute = document.getElementById("min");
@@ -49,6 +53,8 @@ function upDateOptions() {
 }
 upDateOptions();
 
+
+// set alarm form when submit the below part will execute
 const setAlarm = document.querySelector(".set-alarm");
 
 setAlarm.addEventListener("submit", function (e) {
@@ -76,6 +82,8 @@ setAlarm.addEventListener("submit", function (e) {
   }
 });
 
+
+// showing alarm which are present in the alarmList
 function showAlarm(newAlarm, alarmLable) {
   const html = `<li class = "time-list"><span class = "time">${newAlarm}</span><p class="alarmLable">${alarmLable}</p><button class = "delete" onclick = "remove(this.value)"  value="${newAlarm}">DELETE</button></li>`;
 
@@ -83,8 +91,7 @@ function showAlarm(newAlarm, alarmLable) {
   alarmli.innerHTML += html;
 }
 
-// remove alarm
-
+// remove alarm on click 
 const myList = document.querySelector(".set-alarms-list");
 
 myList.addEventListener("click", function (e) {
@@ -93,7 +100,7 @@ myList.addEventListener("click", function (e) {
   }
 });
 
-// Delete alarm
+// Delete alarm 
 const remove = () => {
   console.log(this);
   let newList = alarmList.filter((time) => time != value);
@@ -108,11 +115,14 @@ const clearAlarm = () => {
   alert("alarm cleared");
 };
 
+
+// music through CDN  
 var sound = new Audio(
   "https://www.freespecialeffects.co.uk/soundfx/music/drum_10.wav"
 );
 sound.loop = true;
 
+// function for ringing alarm 
 function ringAlarm(time) {
   sound.play();
   sound.play();
