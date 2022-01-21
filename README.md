@@ -18,11 +18,11 @@
    
 - Set Alarm
 
-   `Provide select boxes with options to set an alarm`
+   `Provided select boxes with options to set an alarm`
 
-   `Once the sets the time and click “Set Alarm” button, add that alarm to the alarms list below`
+   `Once we sets the time and click 'Set-Alarm' button, add that alarm to the alarms list below`
  
-   `When the alarm goes of just use JS alert function to alert in the browser`
+   `When the alarm goes of we have used JS alert function to alert in the browser`
 
 - Display alarm list
 
