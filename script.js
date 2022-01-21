@@ -1,8 +1,20 @@
 // element fetched for showing current time 
 var displayTime = document.getElementById("current-time");
+var displayDay = document.getElementById("current-day");
 
 // list of alarms 
 let alarmList = [];
+
+// list of weekdays
+const weekday = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
 
 
 // function for updating current time to displayTime
@@ -12,6 +24,7 @@ function updateTime() {
   let hour = today.getHours();
   let minute = today.getMinutes();
   let second = today.getSeconds();
+   let day = today.getDay();
   const ampm = hour >= 12 ? "PM" : "AM";
   // for 12 hour watch
   hour %= 12;
@@ -22,6 +35,7 @@ function updateTime() {
   second = second < 10 ? "0" + second : second;
   const time = `${hour}:${minute}:${second} ${ampm}`;
   displayTime.innerHTML = time;
+  displayDay.innerHTML = weekday[day];
 
   setTimeout(function () {
     updateTime();
