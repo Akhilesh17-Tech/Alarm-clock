@@ -24,7 +24,7 @@ function updateTime() {
   let hour = today.getHours();
   let minute = today.getMinutes();
   let second = today.getSeconds();
-   let day = today.getDay();
+  let day = today.getDay();
   const ampm = hour >= 12 ? "PM" : "AM";
   // for 12 hour watch
   hour %= 12;
