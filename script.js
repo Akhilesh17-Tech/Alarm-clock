@@ -105,7 +105,7 @@ function showAlarm(newAlarm, alarmLable) {
   alarmli.innerHTML += html;
 }
 
-// remove alarm on click 
+// remove alarm on click from html page 
 const myList = document.querySelector(".set-alarms-list");
 
 myList.addEventListener("click", function (e) {
@@ -114,7 +114,7 @@ myList.addEventListener("click", function (e) {
   }
 });
 
-// Delete alarm 
+// Delete alarm from array list
 const remove = () => {
   console.log(this);
   let newList = alarmList.filter((time) => time != value);
@@ -122,7 +122,7 @@ const remove = () => {
   alarmList.push.apply(alarmList, newList);
 };
 
-// clear alarm
+// clear alarm function to stop alarm
 const clearAlarm = () => {
   sound.pause();
   clearTimeout();
