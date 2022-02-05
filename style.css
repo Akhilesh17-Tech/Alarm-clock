@@ -56,6 +56,7 @@
   padding: 15px;
 }
 
+/* flex box for buttons */
 .flex {
   display: flex;
   /* border: 2px solid red; */
@@ -88,7 +89,9 @@
   border-radius: 5px;
 }
 
-/* input box  */
+/* flex box end */
+
+/* input box  for alarm lable */
 
 .input-box {
   display: flex;
@@ -105,6 +108,7 @@
 .input-box input:focus {
   outline: none;
 }
+/* input box end */
 
 hr {
   width: 50%;
@@ -112,6 +116,7 @@ hr {
   border-color: rgb(199, 12, 12);
 }
 
+/* div for new alarms */
 .upcoming-alarm {
   text-align: center;
   padding: 15px;
@@ -125,6 +130,7 @@ hr {
   justify-content: center;
   align-items: center;
 }
+
 
 .alarm-list ul {
   list-style: none;
