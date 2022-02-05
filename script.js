@@ -105,9 +105,8 @@ function showAlarm(newAlarm, alarmLable) {
   alarmli.innerHTML += html;
 }
 
-// remove alarm on click from html page 
+// event listner to remove alarm on click from html page 
 const myList = document.querySelector(".set-alarms-list");
-
 myList.addEventListener("click", function (e) {
   if (e.target.classList.contains("delete")) {
     e.target.parentElement.remove();
